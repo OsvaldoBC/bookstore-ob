@@ -10,5 +10,5 @@ const BookList = (props) => {
       <button type="button">Remove</button>
     </div>
   );
-  }
+};
 export default BookList;
