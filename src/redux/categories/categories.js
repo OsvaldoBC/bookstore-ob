@@ -10,7 +10,7 @@ const categoriesReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 const checkStatus = () => ({
   type: CHECK_STATUS,

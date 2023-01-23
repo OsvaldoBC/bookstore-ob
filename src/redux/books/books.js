@@ -14,7 +14,7 @@ const booksReducer = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};
 
 const addBook = () => ({
   type: ADD_BOOK,
