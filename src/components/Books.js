@@ -1,6 +1,6 @@
 import React from 'react';
-import BookForm from '../components/BookForm';
-import BookList from '../components/BookList';
+import BookForm from './BookForm';
+import BookList from './BookList';
 
 const Books = () => (
   <div className="container" style={{ padding: '1em 3em' }}>
