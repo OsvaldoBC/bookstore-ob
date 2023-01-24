@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="logoOJBC.png" alt="logo" width="140"  height="auto" />
+  <img src="logo-osvaldo.jpeg" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Bookstore APP</b></h3>
