@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
 
 const initialState = {
-  id: null,
+  id: '',
   title: '',
   author: '',
 };
@@ -24,7 +24,6 @@ const initialState = {
     const handleSubmit = (e) => {
       e.preventDefault();
       dispatch(addBook(newBook));
-      console.log(newBook);
       e.target.reset();
     };
   
