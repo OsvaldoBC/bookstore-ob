@@ -9,34 +9,34 @@ const initialState = {
   author: '',
 };
 
-  const BookForm = () => {
-    const [newBook, setNewBook] = useState(initialState);
-    const dispatch = useDispatch();
-  
-    const handleChange = (e) => {
-      setNewBook({
-        ...newBook,
-        [e.target.name]: e.target.value,
-        id: uuidv4(),
-      });
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      dispatch(addBook(newBook));
-      e.target.reset();
-    };
-  
-    return (
-      <div>
-        <h2>Add a new book</h2>
-        <form onSubmit={handleSubmit}>
-          <input type="text" name="title" onChange={handleChange} placeholder="Book title" />
-          <input type="text" name="author" onChange={handleChange} placeholder="Book author" />
-          <button type="submit">ADD BOOK</button>
-        </form>
-      </div>
-    );
+const BookForm = () => {
+  const [newBook, setNewBook] = useState(initialState);
+  const dispatch = useDispatch();
+
+  const handleChange = (e) => {
+    setNewBook({
+      ...newBook,
+      [e.target.name]: e.target.value,
+      id: uuidv4(),
+    });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addBook(newBook));
+    e.target.reset();
+  };
+
+  return (
+    <div>
+      <h2>Add a new book</h2>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="title" onChange={handleChange} placeholder="Book title" />
+        <input type="text" name="author" onChange={handleChange} placeholder="Book author" />
+        <button type="submit">ADD BOOK</button>
+      </form>
+    </div>
+  );
+};
 
 export default BookForm;

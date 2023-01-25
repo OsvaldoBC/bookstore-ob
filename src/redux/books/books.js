@@ -23,12 +23,10 @@ const addBook = (payload) => ({
   payload,
 });
 
-
 const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
 });
-
 
 export { addBook, removeBook };
 export default booksReducer;
