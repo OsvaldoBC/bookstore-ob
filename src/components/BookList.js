@@ -4,11 +4,13 @@ const BookList = (props) => {
   const { title, author } = props;
 
   return (
-    <div className="book-container">
+    <ul className='book-list'>
+      <li className="book-container">
       <h2>{title}</h2>
       <p>{author}</p>
       <button type="button">Remove</button>
-    </div>
+     </li>
+    </ul>
   );
 };
 export default BookList;
