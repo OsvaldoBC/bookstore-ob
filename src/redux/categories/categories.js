@@ -1,3 +1,4 @@
+
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
 const initialState = [];
