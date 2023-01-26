@@ -26,9 +26,6 @@ const BookForm = () => {
     e.preventDefault();
     dispatch(asyncAddBook(newBook));
     dispatch(addBook(newBook));
-
-    
-    
     e.target.reset();
   };
 

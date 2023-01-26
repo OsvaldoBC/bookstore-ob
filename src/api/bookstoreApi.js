@@ -1,13 +1,7 @@
 import { loadBooks } from '../redux/books/books';
 
 const api = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
-const appId = 'A5M1SMeOFloqjitxesLY';
-const bookItem = {
-  item_id: 'item1',
-  title: 'The Great Gatsby',
-  author: 'John Smith',
-  category: 'Fiction',
-};
+const appId = 'u6aXe1jt9da8Uk9nIhxM';
 
 const createApp = async () => {
     const url = `${api}/apps/`;
@@ -15,10 +9,10 @@ const createApp = async () => {
       method: 'POST',
     });
     const data = await response.text();
-    console.log(data);
+    return data;;
   };
 
-const addBooks = async (book) => {
+  const apiAddBooks = async (book) => {
   const url = `${api}/apps/${appId}/books`;
   const response = await fetch(url, {
     method: 'POST',
@@ -30,10 +24,10 @@ const addBooks = async (book) => {
     credentials: 'same-origin',
   });
   const data = await response.text();
-  console.log(data);
+  return data;
 };
 
-const getBooks = async (dispatch) => {
+const apiGetBooks = async (dispatch) => {
   const url = `${api}/apps/${appId}/books/`;
   const response = await fetch(url);
   const data = await response.json();
@@ -42,12 +36,11 @@ const getBooks = async (dispatch) => {
     temp.item_id = key;
     return temp;
   });
-  console.log(books);
   dispatch(loadBooks(books));
+  return books;
 };
 
-const deleteBooks = async () => {
-  const id = bookItem.item_id;
+const apiDeleteBooks = async (id) => {
 
   const url = `${api}/apps/${appId}/books/${id}`;
   const response = await fetch(url, {
@@ -59,8 +52,9 @@ const deleteBooks = async () => {
     credentials: 'same-origin',
   });
   const data = await response.text();
-  console.log(data);
+  return data;
 };
 
 export default createApp;
-export { getBooks, addBooks, deleteBooks };
+export { apiAddBooks, apiGetBooks, apiDeleteBooks };
+
