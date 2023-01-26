@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import createApp from '../api/bookstoreApi';
 
 const Navbar = () => (
   <header>
@@ -14,6 +15,7 @@ const Navbar = () => (
           <NavLink to="/categories">CATEGORIES </NavLink>
         </li>
       </ul>
+      <button type="button" style={{ display: 'none' }} onClick={createApp}>create app</button>
     </nav>
   </header>
 );

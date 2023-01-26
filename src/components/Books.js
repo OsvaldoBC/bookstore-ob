@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
 import BookForm from './BookForm';
 import BookList from './BookList';
 
@@ -8,10 +9,11 @@ const Books = () => {
 
   const bookList = books.map((book) => (
     <BookList
-      key={book.id}
-      id={book.id}
+      key={book.item_id}
+      id={book.item_id}
       title={book.title}
       author={book.author}
+      category={book.category}
     />
   ));
 
