@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import createApp from '../api/bookstoreApi';
 
-
 const Navbar = () => (
   <header>
     <h1>Bookstore CMS</h1>

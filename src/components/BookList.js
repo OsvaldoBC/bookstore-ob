@@ -4,7 +4,9 @@ import { asyncDeleteBook } from '../redux/books/BooksAsync';
 import { deleteBook } from '../redux/books/books';
 
 const BookList = (props) => {
-  const { title, author, id, category } = props;
+  const {
+    title, author, id, category,
+  } = props;
   const dispatch = useDispatch();
 
   const handleRemove = () => {

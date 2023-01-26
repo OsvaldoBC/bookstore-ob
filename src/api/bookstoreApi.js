@@ -4,15 +4,15 @@ const api = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 const appId = 'u6aXe1jt9da8Uk9nIhxM';
 
 const createApp = async () => {
-    const url = `${api}/apps/`;
-    const response = await fetch(url, {
-      method: 'POST',
-    });
-    const data = await response.text();
-    return data;;
-  };
+  const url = `${api}/apps/`;
+  const response = await fetch(url, {
+    method: 'POST',
+  });
+  const data = await response.text();
+  return data;
+};
 
-  const apiAddBooks = async (book) => {
+const apiAddBooks = async (book) => {
   const url = `${api}/apps/${appId}/books`;
   const response = await fetch(url, {
     method: 'POST',
@@ -41,7 +41,6 @@ const apiGetBooks = async (dispatch) => {
 };
 
 const apiDeleteBooks = async (id) => {
-
   const url = `${api}/apps/${appId}/books/${id}`;
   const response = await fetch(url, {
     method: 'DELETE',
@@ -57,4 +56,3 @@ const apiDeleteBooks = async (id) => {
 
 export default createApp;
 export { apiAddBooks, apiGetBooks, apiDeleteBooks };
-
