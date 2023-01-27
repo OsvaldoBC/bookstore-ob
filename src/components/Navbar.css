@@ -26,21 +26,23 @@ nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background-color: #e0e0e0;
-  box-shadow: 2px 2px 5px 5px #858694;
 }
 
 .nav-links {
-  display: flex;
-  flex-grow: 1;
-  list-style-type: none;
-  grid-gap: 40px;
-  gap: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
   letter-spacing: 1.9px;
 }
 
 a {
   text-decoration: none;
+  opacity: 0.5;
+}
+
+a.active {
+  opacity: 1;
+  color: #121212;
 }
 
 li a {
