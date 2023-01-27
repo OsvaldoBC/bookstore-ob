@@ -8,7 +8,7 @@ import Categories from './components/Categories';
 
 const App = () => (
 
-<div className="app-container">
+  <div className="app-container">
     <Navbar />
     <Routes>
       <Route exact path="/" element={<Books />} />

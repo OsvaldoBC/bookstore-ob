@@ -1,32 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/books';
-import asyncAddBook from '../redux/books/BooksAsync';
 import './BookForm.css';
 
-const initialState = {
-  id: '',
-  title: '',
-  author: '',
-};
-
 const BookForm = () => {
-  const [newBook, setNewBook] = useState(initialState);
   const dispatch = useDispatch();
-
-  const handleChange = (e) => {
-    setNewBook({
-      ...newBook,
-      [e.target.name]: e.target.value,
-      id: uuidv4(),
-    });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //dispatch(asyncAddBook(newBook));
-    //dispatch(addBook(newBook));
+    // dispatch(asyncAddBook(newBook));
+    // dispatch(addBook(newBook));
     const [title, author, category] = e.target;
     dispatch(addBook({
       title: title.value,
@@ -35,7 +19,7 @@ const BookForm = () => {
       item_id: uuidv4(),
     }));
 
-  title.value = '';
+    title.value = '';
     author.value = '';
     category.value = '';
   };

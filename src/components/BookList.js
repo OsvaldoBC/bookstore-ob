@@ -6,7 +6,6 @@ import './BookList.css';
 import progress from '../images/progress.svg';
 import './Categories.css';
 
-
 const BookList = (props) => {
   const {
     title, author, id, category,
@@ -35,7 +34,7 @@ const BookList = (props) => {
                 </div>
               </div>
               <div className="progress-container">
-              <img src={progress} alt="progress" />
+                <img src={progress} alt="progress" />
                 <div className="progress-info">
                   <p className="progress-percent">73%</p>
                   <p className="progress-status">Completed</p>

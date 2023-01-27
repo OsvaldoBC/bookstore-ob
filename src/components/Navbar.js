@@ -10,7 +10,7 @@ const Navbar = () => (
     <nav>
       <ul className="nav-links">
         <li>
-        <NavLink to="/">BOOKS </NavLink>
+          <NavLink to="/">BOOKS </NavLink>
         </li>
         <li>
           <NavLink to="/categories">CATEGORIES </NavLink>
@@ -19,7 +19,7 @@ const Navbar = () => (
       <button type="button" style={{ display: 'none' }} onClick={createApp}>create app</button>
     </nav>
     <div className="nav-user">
-    <img src={user} alt="user" />
+      <img src={user} alt="user" />
     </div>
   </header>
 );
