@@ -18,9 +18,9 @@ const Books = () => {
   ));
 
   return (
-    <div>
+    <div className="container">
       <h1>Books</h1>
-      <ul>
+      <ul className="book-list" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         {bookList}
       </ul>
       <BookForm />

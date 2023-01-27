@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { asyncDeleteBook } from '../redux/books/BooksAsync';
 import { deleteBook } from '../redux/books/books';
+import './BookList.css';
 
 const BookList = (props) => {
   const {
@@ -15,14 +16,37 @@ const BookList = (props) => {
   };
 
   return (
-    <ul className="book-list">
-      <li id={id} className="book-container">
-        <h2>{title}</h2>
-        <p>{author}</p>
-        <p>{category}</p>
-        <button type="button" onClick={handleRemove}>Remove</button>
-      </li>
-    </ul>
+    <div>
+      <ul className="books-List">
+        <li>
+          <div id={id} className="book-container">
+            <div className="book-info">
+              <div className="book-details">
+                <p className="book-category">{category}</p>
+                <h2 className="book-title">{title}</h2>
+                <p className="book-author">{author}</p>
+                <div className="book-button">
+                  <button type="button">Comments</button>
+                  <button type="button" onClick={handleRemove}>Remove</button>
+                  <button type="button">Edit</button>
+                </div>
+              </div>
+              <div className="progress-container">
+                <div className="progress-info">
+                  <p className="progress-percent">64%</p>
+                  <p className="progress-status">Completed</p>
+                </div>
+              </div>
+              <div className="chapter-container">
+                <p className="current-chapter">CURRENT CHAPTER</p>
+                <p className="chapter">Chapter 17</p>
+                <button type="button" className="chapter-button">UPDATE PROGRESS</button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
   );
 };
 export default BookList;
