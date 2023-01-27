@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import createApp from '../api/bookstoreApi';
+import user from '../images/user.svg';
 
 const Navbar = () => (
   <header>
@@ -18,7 +19,7 @@ const Navbar = () => (
       <button type="button" style={{ display: 'none' }} onClick={createApp}>create app</button>
     </nav>
     <div className="nav-user">
-      <p>user</p>
+    <img src={user} alt="user" />
     </div>
   </header>
 );

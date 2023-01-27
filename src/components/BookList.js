@@ -3,6 +3,9 @@ import { useDispatch } from 'react-redux';
 import { asyncDeleteBook } from '../redux/books/BooksAsync';
 import { deleteBook } from '../redux/books/books';
 import './BookList.css';
+import progress from '../images/progress.svg';
+import './Categories.css';
+
 
 const BookList = (props) => {
   const {
@@ -32,8 +35,9 @@ const BookList = (props) => {
                 </div>
               </div>
               <div className="progress-container">
+              <img src={progress} alt="progress" />
                 <div className="progress-info">
-                  <p className="progress-percent">64%</p>
+                  <p className="progress-percent">73%</p>
                   <p className="progress-status">Completed</p>
                 </div>
               </div>
