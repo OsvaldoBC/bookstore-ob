@@ -1,9 +1,10 @@
-.books {
+.books-List {
   display: flex;
   border-radius: 4px;
   border: 1px solid #e8e8e8;
   padding: 8px;
   margin-right: 40px;
+  background-color: #fff;
 }
 
 .book-info {
@@ -77,8 +78,8 @@
   justify-content: flex-start;
   align-items: center;
   gap: 1.313rem;
+  padding-right: 20px;
   border-right: solid 1px #e8e8e8;
-  padding-right: 150px;
 }
 
 .progress-info {
