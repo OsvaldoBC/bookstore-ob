@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
+import './Books.css';
 import BookForm from './BookForm';
 import BookList from './BookList';
 
@@ -18,9 +18,8 @@ const Books = () => {
   ));
 
   return (
-    <div>
-      <h1>Books</h1>
-      <ul>
+    <div className="container">
+      <ul style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         {bookList}
       </ul>
       <BookForm />

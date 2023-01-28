@@ -1,12 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+li {
+  list-style: none;
+  padding: 0 0.5rem;
+}
 
 .book-list {
   display: flex;
   flex-direction: column;
 }
 
-.book-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f0f0f0;
+.app-container {
+  margin: 0;
+  padding: 0 0 8%;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 rgb(0 0 0 / 15%);
+  background-color: #fff;
 }

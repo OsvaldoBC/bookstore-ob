@@ -33,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [To-Do-List-APP] <a name="about-project"></a>
+# 📖 [The-Bookstore-APP] <a name="about-project"></a>
 
-**[To-DO-List-APP]** The Bookstore is a website an MVP version of it, that allows you to: Display a list of books. Add a book. Remove a selected book. with two subpages: "Books" and "Categories."
+**[The-Bookstore-APP]** The Bookstore is a website an MVP version of it, that allows you to: Display a list of books. Add a book. Remove a selected book. with two subpages: "Books" and "Categories."
 
 ## 🛠 Built With React JS<a name="built-with"></a>
 
