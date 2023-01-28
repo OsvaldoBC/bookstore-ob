@@ -9,8 +9,7 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch(asyncAddBook(newBook));
-    // dispatch(addBook(newBook));
+    
     const [title, author, category] = e.target;
     dispatch(addBook({
       title: title.value,
@@ -27,7 +26,7 @@ const BookForm = () => {
   return (
     <div className="add-book-container">
       <h2>ADD NEW BOOK</h2>
-      <form onSubmit={handleSubmit} className="add-form">
+      <form onSubmit={handleSubmit} className="d-flex add-form">
         <input type="text" className="title" name="title" placeholder="Book Title" required />
         <input type="text" className="author" name="author" placeholder="Author" required />
         <input type="text" className="category" name="category" placeholder="Category" required />
